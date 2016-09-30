@@ -31,4 +31,10 @@ Week 3
 Not sure why my volcano and fireworks drawings both start with a line or box of particles moving slowly up the screen before the actual animation begins or how to fix that.
 
 
+Week 4
+
+I spent most of my time for this homework trying to figure out a way to most effeciently build the solar system. I tried using arrays in one of the attempts I posted and then individual objects in another. I was trying to cement my knowledge of arrays and how to use them.
+
+
+
 
