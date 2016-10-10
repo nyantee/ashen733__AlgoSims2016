@@ -36,5 +36,12 @@ Week 4
 I spent most of my time for this homework trying to figure out a way to most effeciently build the solar system. I tried using arrays in one of the attempts I posted and then individual objects in another. I was trying to cement my knowledge of arrays and how to use them.
 
 
+Week 5
+
+For exercise A I wanted to create a series of springs in a row made of blocks that were of different heights so that when the program opened each would spring form a stretched point in successions but I couldn't figure out how to make the spring into an object successfully which is what i was trying to do with the NOARRAY version in my homework folder. 
+
+For exercise B, I figured out how to add a GUI to the drawing to change the size of the box spring. 
+
+
 
 
