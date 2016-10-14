@@ -29,7 +29,7 @@ public:
     
     ofVec2f acc, vel;
     ofVec2f anchor, ball;
-    ofVec2f  shift;
+    ofVec2f  move;
     
     //to make the ball dragable
     bool dragging;
@@ -37,6 +37,9 @@ public:
     ofxFloatSlider blockSize;
 
     ofxPanel gui;
+    
+
+    
 };
 
 

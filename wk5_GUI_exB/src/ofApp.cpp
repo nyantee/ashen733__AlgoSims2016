@@ -3,6 +3,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
+    move = ofVec2f(10,0);
+    
     
     gui.setup();
     gui.add(blockSize.setup("blockSize", 60, 10, 300));
@@ -15,7 +17,7 @@ void ofApp::setup(){
     
     anchor = ofVec2f(ofGetWidth()/2, 20);
     ball = ofVec2f(ofGetWidth()/2, 400);
-     shift = ofVec2f(10, 0);
+    
     
     dragging = false;
     
@@ -60,6 +62,8 @@ void ofApp::update(){
         ball.set(ofGetWidth()/2,20);
     }
     
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -68,9 +72,9 @@ void ofApp::draw(){
     
     
     ofSetColor(ofRandom(255),ofRandom(255),ofRandom(255));
-    ofDrawRectangle(anchor, blockSize, ball.y); //spring
-    ofDrawRectangle(anchor, blockSize, blockSize);
-    ofDrawRectangle(ball, blockSize, blockSize);
+    ofDrawRectangle(anchor += move, blockSize, ball.y + 10); //spring
+    ofDrawRectangle(anchor += move, blockSize, blockSize);
+    ofDrawRectangle(ball += move, blockSize, blockSize);
     
 
     
