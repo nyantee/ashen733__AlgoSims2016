@@ -20,13 +20,13 @@ void ofApp::setup(){
     
     car1.color = ofColor(0,255,0);
     car2.color = ofColor(0,0,255);
-      car3.color = ofColor(0,200,255);
-      car4.color = ofColor(200,0,255);
-      car5.color = ofColor(50,0,200);
+    car3.color = ofColor(0,200,255);
+    car4.color = ofColor(200,0,255);
+    car5.color = ofColor(50,0,200);
     
     ofBackground(255);
     
-  
+    
 }
 
 //--------------------------------------------------------------
@@ -53,61 +53,61 @@ void ofApp::update(){
         car2.color = ofColor(0,0,255);
     }
     
-        //----------------
-        
-      
-        if( car2.getPosition().distance( car3.getPosition() ) < area ){
-            car2.color = ofColor(255,0,0);
-            car3.color = ofColor(255,0,0);
-            
-            car2.addRepulsionForce( car3.getPosition(), area,  0.1 );
-            car3.addRepulsionForce( car2.getPosition(), area, 0.1 );
-        }else{
-            car2.color = ofColor(0,255,0);
-            car3.color = ofColor(0,255,0);
-        }
-
-        
-            //---------------
-            
-            if( car3.getPosition().distance( car4.getPosition() ) < area ){
-                car3.color = ofColor(255,0,0);
-                car4.color = ofColor(255,0,0);
-                
-                car3.addRepulsionForce( car4.getPosition(), area,  0.1 );
-                car4.addRepulsionForce( car3.getPosition(), area, 0.1 );
-            }else{
-                car3.color = ofColor(0,255,0);
-                car4.color = ofColor(0,255,0);
-            }
-
-            //---------
-               
-                if( car4.getPosition().distance( car5.getPosition() ) < area ){
-                    car4.color = ofColor(255,0,0);
-                    car5.color = ofColor(255,0,0);
-                    
-                    car4.addRepulsionForce( car5.getPosition(), area,  0.1 );
-                    car5.addRepulsionForce( car4.getPosition(), area, 0.1 );
-                }else{
-                    car4.color = ofColor(0,255,0);
-                    car5.color = ofColor(0,255,0);
-                }
+    //----------------
     
-        //-----------------------
-                    
-                   
-        if( car1.getPosition().distance( car5.getPosition() ) < area ){
-                        car1.color = ofColor(255,0,0);
-                        car5.color = ofColor(255,0,0);
-                        
-                        car1.addRepulsionForce( car5.getPosition(), area,  0.1 );
-                        car5.addRepulsionForce( car1.getPosition(), area, 0.1 );
-        }else{
-                car1.color = ofColor(0,255,0);
-                car5.color = ofColor(0,255,0);
+    
+    if( car2.getPosition().distance( car3.getPosition() ) < area ){
+        car2.color = ofColor(255,0,0);
+        car3.color = ofColor(255,0,0);
         
-                    }
+        car2.addRepulsionForce( car3.getPosition(), area,  0.1 );
+        car3.addRepulsionForce( car2.getPosition(), area, 0.1 );
+    }else{
+        car2.color = ofColor(0,255,0);
+        car3.color = ofColor(0,255,0);
+    }
+    
+    
+    //---------------
+    
+    if( car3.getPosition().distance( car4.getPosition() ) < area ){
+        car3.color = ofColor(255,0,0);
+        car4.color = ofColor(255,0,0);
+        
+        car3.addRepulsionForce( car4.getPosition(), area,  0.1 );
+        car4.addRepulsionForce( car3.getPosition(), area, 0.1 );
+    }else{
+        car3.color = ofColor(0,255,0);
+        car4.color = ofColor(0,255,0);
+    }
+    
+    //---------
+    
+    if( car4.getPosition().distance( car5.getPosition() ) < area ){
+        car4.color = ofColor(255,0,0);
+        car5.color = ofColor(255,0,0);
+        
+        car4.addRepulsionForce( car5.getPosition(), area,  0.1 );
+        car5.addRepulsionForce( car4.getPosition(), area, 0.1 );
+    }else{
+        car4.color = ofColor(0,255,0);
+        car5.color = ofColor(0,255,0);
+    }
+    
+    //-----------------------
+    
+    
+    if( car1.getPosition().distance( car5.getPosition() ) < area ){
+        car1.color = ofColor(255,0,0);
+        car5.color = ofColor(255,0,0);
+        
+        car1.addRepulsionForce( car5.getPosition(), area,  0.1 );
+        car5.addRepulsionForce( car1.getPosition(), area, 0.1 );
+    }else{
+        car1.color = ofColor(0,255,0);
+        car5.color = ofColor(0,255,0);
+        
+    }
     
     // update physics
     car1.update();
@@ -123,29 +123,29 @@ void ofApp::update(){
     if( car2.getPosition().distance(dest2) < 5){
         dest2 = ofPoint( ofRandomWidth(), ofRandomHeight() );
     }
-                    
+    
     if( car3.getPosition().distance(dest3) < 5){
         dest3 = ofPoint( ofRandomWidth(), ofRandomHeight() );
     }
-                    
+    
     if( car4.getPosition().distance(dest4) < 5){
         dest4 = ofPoint( ofRandomWidth(), ofRandomHeight() );
     }
-                    
-                    
+    
+    
     if( car5.getPosition().distance(dest5) < 5){
-    dest5 = ofPoint( ofRandomWidth(), ofRandomHeight() );
+        dest5 = ofPoint( ofRandomWidth(), ofRandomHeight() );
     }
     
 }
 
-                    
-            
+
+
 
 //-------------------------------------------------------------
 void ofApp::draw(){
     
-//    ofBackground(0);
+    //    ofBackground(0);
     
     ofSetColor( car1.color );
     ofDrawCircle( dest1, 4 );
@@ -170,45 +170,45 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+    
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
-
+void ofApp::dragEvent(ofDragInfo dragInfo){
+    
 }

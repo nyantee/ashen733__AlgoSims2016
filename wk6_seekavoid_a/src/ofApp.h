@@ -4,7 +4,7 @@
 #include "Particle.h"
 
 class ofApp : public ofBaseApp{
-
+    
 public:
     void setup();
     void update();
@@ -19,7 +19,7 @@ public:
     void windowResized(int w, int h);
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
-		
+    
     ofPoint dest1, dest2, dest3, dest4, dest5;
     Particle car1, car2, car3, car4, car5;
 };

@@ -44,4 +44,16 @@ For exercise B, I figured out how to add a GUI to the drawing to change the size
 
 
 
+Week 6
 
+Exercise A
+
+For exercise A, I simply played around with the number of cars. I wanted to make an array but I ran out of time, though I know this would have been a good opportunity to exercise one.
+
+Exercise B
+
+I borrowed this code from Tao's GitHub because my wasn't working and I started to play with the numbers in it. I wanted to make it look like a ski line with people floating down the line in ski lifts, but my image would not load properly. 
+
+Exercise C
+
+The class flocking exampes in the class folder wouldn't work on my computer. I tried copy and pasting Vivian's code from her GitHub and using the OF debug trick that we used but couldn't figure it out. So for this exercise, I applied the 3D effect to the seek and avoid example. 
