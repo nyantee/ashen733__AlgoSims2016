@@ -1,0 +1,83 @@
+//
+//  Particle.cpp
+//  Spring
+//
+//  Created by Vishaal Ravikumar on 10/2/16.
+//
+//
+
+#include "Particle.hpp"
+
+Particle::Particle() {
+    pos.x = ofGetWindowWidth()*0.5;
+    pos.y = ofGetWindowHeight()*0.5;
+//    pos.z = 0.0;
+    
+    vel.set(0,0);
+    acc.set(0,0);
+    
+    damp = .098; // de resistance!!!
+    radius = 70;
+    
+    bFix = false;
+}
+
+void Particle::setInit(ofVec2f _pos, ofVec2f _vel){
+    
+    pos = _pos;
+    vel = _vel;
+    acc.set(0,0);
+}
+void Particle::update() {
+    
+    vel += acc;
+    vel *= damp;
+    pos += vel;
+    acc *= 0.0;
+    
+}
+
+void Particle::bounding(){
+    if( pos.x < 0.0+radius || pos.x > ofGetWidth()-radius ){
+        pos.x -= vel.x; // Bounced back! think of this as an undo;
+        vel.x *= -1.0;
+    }
+    
+    if( pos.y < 0.0+radius || pos.y > ofGetHeight()-radius ){
+        pos.y -= vel.y; // Bounced back! think of this as an undo;
+        vel.y *= -1.0;
+    }
+}
+
+ofVec2f Particle::getPosition(){
+    return pos;
+}
+
+ofVec2f Particle::getVelocity(){
+    return vel;
+}
+
+float Particle::getRadius(){
+    return radius;
+}
+
+void Particle::addForce(ofVec2f _force){
+    acc += _force;
+}
+
+void Particle::draw() {
+    
+    
+//    ofSetColor(255, 0, 100);
+    
+    ofCircle(pos, radius);
+    
+    ofPoint velNormal = vel;
+    velNormal.normalize();
+    
+    ofVec2f velPerp;
+    velPerp.x = -velNormal.y;
+    velPerp.y = velNormal.x;
+    
+    ofLine(pos.x, pos.y, pos.x + velNormal.x*10, pos.y + velNormal.y*10);
+}
