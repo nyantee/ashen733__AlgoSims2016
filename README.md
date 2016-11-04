@@ -57,3 +57,24 @@ I borrowed this code from Tao's GitHub because my wasn't working and I started t
 Exercise C
 
 The class flocking exampes in the class folder wouldn't work on my computer. I tried copy and pasting Vivian's code from her GitHub and using the OF debug trick that we used but couldn't figure it out. So for this exercise, I applied the 3D effect to the seek and avoid example. 
+
+
+
+Week 9
+
+Exercise A
+
+I used perlin noise to make  a wave form that moves across the page
+
+Exercise B
+
+I change the direction of the vector feild with mousex and mousey and with a GUI
+
+Exercise C
+
+I was experimenting with different ways to effect the amount of noise in the example through GUIs but didn't get very far
+
+
+
+
+
