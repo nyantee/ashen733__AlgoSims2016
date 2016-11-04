@@ -22,7 +22,7 @@ void Particle::setup(){
     
     radius = 2;
     
-    vel.x = ofRandom(-10,10);
+    vel.x = ofRandom(-20,20);
     vel.y = ofRandom(5,10);
     
 
@@ -38,16 +38,33 @@ void Particle::explosion(){
     
     pos = pos + vel;
     
-    radius = radius + pos.y*.007;
+    //radius = radius + pos.y*.007;
     
    
 
 }
 
+
+
+void Particle::disappear(){
+    
+    if (ofGetMouseX() == (pos.x || pos.y)){
+        
+        radius = 0;
+    }
+    
+    else{
+        
+        radius = radius + pos.y*.007;
+        
+    }
+    
+}
+
+
+
+
 void Particle::draw(){
-    
-    
-    
     
     
  

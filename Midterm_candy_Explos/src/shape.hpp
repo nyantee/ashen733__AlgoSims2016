@@ -17,7 +17,7 @@ public:
     void draw();
     void setup();
     void explosion();
-    
+        void disappear();
     
     void restart();
     

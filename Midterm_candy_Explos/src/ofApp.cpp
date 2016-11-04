@@ -46,7 +46,14 @@ void ofApp::update(){
 //    }
 //    
 //        }
-//
+    
+    for(int i=0; i<num; i++){
+    
+       particles[i].disappear();
+        
+    }
+    
+
 }
     
 

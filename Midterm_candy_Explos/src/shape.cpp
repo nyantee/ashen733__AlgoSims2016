@@ -29,7 +29,7 @@ void shape::setup(){
     
     //    color = ofColor(ofRandom(200), ofRandom(200), ofRandom(200),100);
     
-    Sunflowers.load("images/sunflowers1.jpg");
+   
     
     someNumber = ofRandom(1,400);
 }
@@ -40,7 +40,7 @@ void shape::explosion(){
     
     pos = pos + vel;
     
-    radius = radius + pos.y*.008;
+  
     
     
     
