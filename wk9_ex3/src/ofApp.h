@@ -32,6 +32,7 @@ public:
     ofxFloatSlider xval;
      ofxFloatSlider yval;
      ofxFloatSlider zval;
+    ofxFloatSlider mult;
     
     ofxPanel gui;
     

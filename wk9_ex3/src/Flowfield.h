@@ -16,7 +16,7 @@ public:
     void setup (int _width, int _height, int _depth, int _resolution);
     void update ();
     void draw ();
-    void setPerlin(float xval, float yval, float zval);
+    void setPerlin(float xval, float yval, float zval, float mult);
     ofVec3f getForceAtPosition( ofVec3f pos );
     
     int width, height, depth, resolution;

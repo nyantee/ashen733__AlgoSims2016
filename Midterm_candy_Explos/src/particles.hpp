@@ -22,7 +22,9 @@ public:
     void draw();
     void setup();
     void explosion();
-    void disappear();
+    ofPoint getPosition();
+    float getRadius();
+    float setRadius(float _radius);
     
     void restart();
     
@@ -32,10 +34,12 @@ public:
     
 //  ofVec2f getPosition();
     
-    float radius;
+
     int someNumber;
     
     int grow;
+    
+    float radius;
   
     
         ofColor change;

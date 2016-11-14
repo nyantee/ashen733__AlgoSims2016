@@ -7,9 +7,10 @@ void ofApp::setup(){
     gui.add(xval.setup("xperlin", .1, 0, 5));
     gui.add(yval.setup("yperlin", .1, 0, 5));
     gui.add(zval.setup("zperlin", .1, 0, 5));
+      gui.add(mult.setup("multiply", 20, 10, 100));
     
     myField.setup( 1000, 1000, 1000, 50 );
-    myField.setPerlin(xval,yval,zval);
+   
     
     particleList.clear();
     
@@ -36,6 +37,10 @@ void ofApp::update(){
         particleList[i].applyForce( myField.getForceAtPosition(particleList[i].pos ) * 0.005 );
         particleList[i].update();
     }
+    
+     myField.setPerlin(xval,yval,zval,mult);
+    
+    
 }
 
 //--------------------------------------------------------------

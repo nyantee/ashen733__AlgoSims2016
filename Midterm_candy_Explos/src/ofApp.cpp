@@ -5,7 +5,7 @@
 void ofApp::setup(){
     
     
-    num = 50;
+    num = 20;
     for(int i =0; i< num; i++){
     
     //initialize the array
@@ -18,9 +18,9 @@ void ofApp::setup(){
         tempV.setup();
         lines.push_back(tempV);
         
+        
       
-        
-        
+    
     }
     
     
@@ -34,28 +34,23 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     
-  
-//        
-//        for(int i=0; i< num; i++){
-//    
-//            if (particles[i].pos.x == ofGetMouseX()){
-//        
-//                particles[i].restart();
-//        
-//        
-//    }
-//    
-//        }
+    
+ 
+
     
     for(int i=0; i<num; i++){
-    
-       particles[i].disappear();
         
-    }
+//          particles[i].setRadius(50);
+        
+        
+        particles[i].explosion();
+               lines[i].explosion();
+        
+        
     
-
+        
 }
-    
+}
 
 
 //--------------------------------------------------------------
@@ -68,10 +63,9 @@ void ofApp::draw(){
     ofBackground(0);
     for(int i=0; i< num; i++){
   
-        particles[i].explosion();
         particles[i].draw();
         
-        lines[i].explosion();
+ 
         lines[i].draw();
         
         //to log data to the console:
@@ -135,13 +129,31 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
     
+    
+    cout << "PRESSED";
+    
+    mouse = ofPoint(mouseX, mouseY);
+    
+    
+    for(int i =0; i< num; i++){
+        
+        if( particles[i].getPosition().distance(mouse) < particles[i].getRadius()){
+            particles[i].setRadius(0);
+        }
+        
+        
+    }
+
     
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
+    
+  
+    
+ 
 
 }
 

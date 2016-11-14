@@ -37,4 +37,6 @@ void Particle::draw() {
 //    ofCircle( pos, 2 );
 //    ofVertex(pos);
     glVertex3fv(&pos.x);
+    
+    //what does this mean?
 }

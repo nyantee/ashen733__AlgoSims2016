@@ -52,6 +52,9 @@ void shape::draw(){
     
     
     
+    
+    
+    
 //    
 //    ofSetColor(ofRandom(200), ofRandom(200), ofRandom(200));
 //    
@@ -90,21 +93,4 @@ void shape::restart(){
 }
 
 
-
-//
-//ofVec2f Particle::getPosition(){
-//    return pos;
-//}
-
-//
-//void Particle::link(){
-//
-//    if (pos.x == (ofGetMouseX()+20) || pos.y == (ofGetMouseY() - 20) ){
-//
-//
-//        
-//}
-//
-//
-//}
 

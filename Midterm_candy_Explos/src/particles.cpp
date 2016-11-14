@@ -20,10 +20,10 @@ void Particle::setup(){
     pos.x = 500;
     pos.y = 0;
     
-    radius = 2;
+    radius = 5;
     
-    vel.x = ofRandom(-20,20);
-    vel.y = ofRandom(5,10);
+    vel.x = ofRandom(-10,10);
+    vel.y = ofRandom(3,5);
     
 
     
@@ -38,7 +38,7 @@ void Particle::explosion(){
     
     pos = pos + vel;
     
-    //radius = radius + pos.y*.007;
+    radius = radius + pos.y*.003;
     
    
 
@@ -46,21 +46,21 @@ void Particle::explosion(){
 
 
 
-void Particle::disappear(){
-    
-    if (ofGetMouseX() == (pos.x || pos.y)){
-        
-        radius = 0;
-    }
-    
-    else{
-        
-        radius = radius + pos.y*.007;
-        
-    }
-    
+ofPoint Particle::getPosition(){
+    return pos;
 }
 
+
+float Particle::setRadius(float _radius){
+    
+    radius = _radius;
+}
+
+
+float Particle::getRadius(){
+    
+    return radius;
+}
 
 
 

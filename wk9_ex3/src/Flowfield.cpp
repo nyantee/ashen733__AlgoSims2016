@@ -47,13 +47,13 @@ void Flowfield::draw () {
     }
 }
 
-void Flowfield::setPerlin(float xval, float yval, float zval) {
+void Flowfield::setPerlin(float xval, float yval, float zval, float mult) {
     for( int z = 0; z < flowList.size(); z++){
         for( int y=0; y<flowList[z].size(); y++){
             for( int x=0; x<flowList[z][y].size(); x++){
                 float noise = ofMap( ofNoise(x*xval, y*yval, z*zval), 0, 1, 0, TWO_PI);
                 float cotNoise = cos(noise)/sin(noise);
-                flowList[z][y][x].set( ofVec3f( cos(noise) * 20.0, sin(noise) * 20.0, sin (noise) * 20.0 ) );
+                flowList[z][y][x].set( ofVec3f( cos(noise) * mult, sin(noise) * mult, sin (noise) * mult ) );
             }
         }
     }

@@ -27,9 +27,10 @@ class ofApp : public ofBaseApp{
         void gotMessage(ofMessage msg);
     
     ofVec2f getPosition();
-    
+    float getRadius();
+    float setRadius(float _radius);
    
-    
+    ofPoint mouse;
     
 		
     vector<Particle> particles;
