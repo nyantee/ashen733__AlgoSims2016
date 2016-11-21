@@ -8,13 +8,12 @@
 void ofApp::setup(){
     
     
-     gui.setup(meshParameters);
+    gui.setup();
+    gui.add(intensityS.setup("intensity", 20, 0, 100));
     
-   
+     gui.add(conn.setup("connection", 10, 0, 100));
     
-    meshParameters.add(conn.set("connection", 20, 1, 100));
-    meshParameters.add(intensity.set("intensity", 10, 1, 100));
-    meshParameters.add(color.set("color", 1, 0, 1));
+    
     
 //     gui.add(color.setup("color", 60, 10, 300));
     
@@ -30,14 +29,14 @@ void ofApp::setup(){
     mesh.enableIndices();
     
     
-    float intensityThreshold = intensity;
+//    float intensityThreshold = intensity;
     int w = image.getWidth();
     int h = image.getHeight();
     for (int x=0; x<w; ++x) {
         for (int y=0; y<h; ++y) {
             ofColor c = image.getColor(x, y);
             float intensity = c.getLightness();
-            if (intensity >= intensityThreshold) {
+            if (intensity >= intensityS) {
                 float saturation = c.getSaturation();
                 float z = ofMap(saturation, 0, 255, -100, 100);
                 // why do we have to map sat?
@@ -63,7 +62,7 @@ void ofApp::setup(){
     // Let's add some lines!
     
     
-    float connectionDistance = conn;
+//    float connectionDistance = conn;
     
     int numVerts = mesh.getNumVertices();
     for (int a=0; a<numVerts; ++a) {
@@ -71,7 +70,7 @@ void ofApp::setup(){
         for (int b=a+1; b<numVerts; ++b) {
             ofVec3f vertb = mesh.getVertex(b);
             float distance = verta.distance(vertb);
-            if (distance <= connectionDistance) {
+            if (distance <= conn) {
                 // In OF_PRIMITIVE_LINES, every pair of vertices or indices will be
                 // connected to form a line
                 mesh.addIndex(a);

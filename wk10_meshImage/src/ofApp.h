@@ -29,11 +29,11 @@ class ofApp : public ofBaseApp{
     ofEasyCam easyCam;
     
     
+    
+    ofxFloatSlider intensityS;
+     ofxFloatSlider conn;
+    
     ofxPanel gui;
     
-    ofParameterGroup meshParameters;
-    ofParameter<float> conn;
-    ofParameter<float> intensity;
-    ofParameter<float> color;
     
 };
