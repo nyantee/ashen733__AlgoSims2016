@@ -23,5 +23,7 @@ public:
     const int           SIZE_LIMIT = 500;
     bool                mIsAddingParticles;
     
+    float big;
+    
 };
 

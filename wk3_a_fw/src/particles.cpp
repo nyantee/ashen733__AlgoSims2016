@@ -9,6 +9,7 @@
 #include "particles.hpp"
 
 
+
 void Particle::setup(){
 
     pos.x = ofGetWidth()/2;
@@ -22,6 +23,10 @@ void Particle::setup(){
     color = ofColor(ofRandom(255), ofRandom(255), ofRandom(255),ofRandom(0,255));
     
     someNumber = ofRandom(1,400);
+    
+    
+      mLifeSpan = INITIAL_LIFE_SPAN;
+    
 }
 
 void Particle::explosion(){
@@ -49,7 +54,10 @@ void Particle::explosion(){
 void Particle::draw(){
 
     ofSetColor(color);
-    ofEllipse(pos.x, pos.y, radius, radius);
+    // ofEllipse(pos.x, pos.y, radius, radius);
+    
+      ofDrawCircle(pos.x, pos.y, ofRandom(5,12)* ofMap(mLifeSpan, 0,255.f, 0, 1.f));
+    
 }
 
 void Particle::restart(){

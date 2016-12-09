@@ -25,7 +25,9 @@ public:
     
     ofVec2f mPosition, mVelocity, mAcceleration;
     
-    float mLifeSpan;
+    float mLifeSpan, mShape, mHape;
     const float INITIAL_LIFE_SPAN = 120.0f;
     const float BLINKING_LIFE_SPAN = 100.0f; //SMALL F DEFINES AS A FLOAT
+    
+    float big;
 };

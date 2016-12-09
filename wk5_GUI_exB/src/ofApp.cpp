@@ -8,6 +8,9 @@ void ofApp::setup(){
     
     gui.setup();
     gui.add(blockSize.setup("blockSize", 60, 10, 300));
+    gui.add(blockSize.setup("blockSize", 60, 10, 300));
+    gui.add(blockSize.setup("blockSize", 60, 10, 300));
+    gui.add(blockSize.setup("blockSize", 60, 10, 300));
     
     
     ofBackground(0);

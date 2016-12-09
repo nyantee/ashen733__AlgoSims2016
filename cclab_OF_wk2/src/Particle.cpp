@@ -11,10 +11,20 @@
 
 Particle :: Particle (ofVec2f position){
     
+    
+    
+    
+     mShape = (1,1);
+     mHape = (1,-1);
+    
     mPosition = position;
-    mVelocity = ofVec2f(ofRandom(-2.f , 2.f),(ofRandom(-2.f , 2.f)));
+    mVelocity = ofVec2f(sin(ofRandom(-2.f , 2.f)),cos((ofRandom(-2.f , 2.f))));
                         mAcceleration = ofVec2f(0);
                         mLifeSpan = INITIAL_LIFE_SPAN;
+    
+    
+    
+    
     
 }
 
@@ -46,6 +56,7 @@ void Particle::update(float multiplier){
         mPosition += mVelocity * multiplier;
                 
 
+    
 
 
         if (mLifeSpan>0){
@@ -60,15 +71,19 @@ void Particle::update(float multiplier){
                             
                             if (mLifeSpan> BLINKING_LIFE_SPAN){
                                 
-                                ofSetColor(255);
+                                ofSetColor(20,200,200);
                                 
                             } else if (mLifeSpan<= BLINKING_LIFE_SPAN){
                                 
-                                ofSetColor(ofRandom(0,mLifeSpan/INITIAL_LIFE_SPAN)*255);
+                                ofSetColor(ofRandom(0,mLifeSpan/INITIAL_LIFE_SPAN)*255,200,200);
                         }
                             
                             
-                            ofDrawCircle(mPosition, 5.f* ofMap(mLifeSpan, 0,255.f, 0, 1.f));
+                            
+                            ofDrawCircle(mPosition, 4* ofMap(mLifeSpan, 0,255.f, 0, 1.f));
+                            
+                            
+                        
                             
                         }
                     

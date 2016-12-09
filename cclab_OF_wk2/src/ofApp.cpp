@@ -4,6 +4,10 @@
 void ofApp::setup(){
     
     
+    ofSetBackgroundAuto(false);
+    ofEnableAlphaBlending();
+    
+    
     ofBackground(100, 25, 245);
     mGravity = ofVec2f(0.f, 0.02f); //0.f means 0.0
 
@@ -30,6 +34,8 @@ void ofApp::draw(){
         mSystems[i].draw();
         
     }
+              ofSetColor(150,60,200,10);
+        ofDrawRectangle(0,0,ofGetWidth(),ofGetHeight());
     
 
 }

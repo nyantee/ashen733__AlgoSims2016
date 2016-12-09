@@ -27,6 +27,11 @@ public:
     float radius;
     int someNumber;
     
+    float mLifeSpan;
+    
+    const float INITIAL_LIFE_SPAN = 120.0;
+    const float BLINKING_LIFE_SPAN = 100.0; //SMALL F DEFINES AS A FLOAT
+    
 };
 
 
