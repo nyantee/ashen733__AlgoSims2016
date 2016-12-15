@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "MyMoon.hpp"
+#include "Dust.hpp"
 #include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
@@ -27,7 +28,11 @@ class ofApp : public ofBaseApp{
     
      vector<MyMoon> circles;
     
+     vector<Dust> flecks;
+    
      int num = 50;
+    
+    int fum = 2000;
     
         ofEasyCam cam;
     
@@ -35,4 +40,11 @@ class ofApp : public ofBaseApp{
     
     ofxPanel gui;
     ofParameter<float> step;
+    ofParameter<float> height;
+    ofParameter<float> color;
+    
+    float _x;
+    float _y;
+    
+    
 };

@@ -8,16 +8,18 @@
 
 void ofApp::setup(){
     
+     ofBackground(0);
+    
     
     gui.setup();
     gui.add(step.set("step", 0.0001, 0.0001,0.001));
+     gui.add(height.set("height", 20, 2,30));
+    gui.add(color.set("color", 255, 0,255));
     
     
     for(int i =0; i < num; i++){
         
         float radius = 800 - i*10;
-        
-        
         
         
         MyMoon p;
@@ -37,6 +39,21 @@ void ofApp::setup(){
         
     }
     
+    
+    
+    for(int j =0; j < fum; j++){
+        
+        
+        Dust d;
+        flecks.push_back(d);
+        
+        flecks[j].setup();
+        
+
+        
+    }
+
+    
    
 }
 
@@ -54,8 +71,11 @@ void ofApp::update(){
         
         
         
-        float _x= -mouseX*2;
-        float _y= -mouseY*3;
+//        float _x= -mouseX*2;
+//        float _y= -mouseY*4;
+        
+        _x= 0;
+         _y= 0;
         
 circles[i].update((Onoise+=step), ofPoint(_x, _y));
         
@@ -71,6 +91,20 @@ circles[i].update((Onoise+=step), ofPoint(_x, _y));
     }
     
     
+    for(int j =0; j < fum; j++){
+        
+        
+     
+        
+        flecks[j].update();
+        
+        
+        
+    }
+    
+   
+    
+    
       std::cout << "step::" <<  Onoise+step << endl;
 
 }
@@ -79,7 +113,7 @@ circles[i].update((Onoise+=step), ofPoint(_x, _y));
 void ofApp::draw(){
     
   
-    
+   
     
     
 
@@ -87,20 +121,47 @@ void ofApp::draw(){
     
     ofPushMatrix();
     
+    
+
+    
+    
     for(int i =0; i < num; i++){
     
         float size = 50 + (i*10);
-        ofPoint zShift( 0, 0, 30 );
+        
+        
+        ofPoint zShift( 0, 0, height );
         ofTranslate(zShift);
+        
+          ofSetColor(i*4,10 , color);
     
         circles[i].draw(size);
         
+        
+        
     }
+    
+     float less= circles[2].getXPosition();
+    
+    for(int j =0; j < fum; j++){
+        
+        
+       
+        
+        flecks[j].draw(less);
+        
+        
+    }
+    
+    
     
     ofPopMatrix();
     
+    
+    
     cam.end();
     
+   
     
     gui.draw();
         
@@ -118,6 +179,9 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
+    
+    _x= -mouseX*2;
+  _y= -mouseY*4;
 
 }
 
@@ -129,6 +193,10 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
 
+    
+    
+   
+    
 }
 
 //--------------------------------------------------------------

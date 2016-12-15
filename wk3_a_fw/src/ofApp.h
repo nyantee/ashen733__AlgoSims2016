@@ -25,6 +25,14 @@ class ofApp : public ofBaseApp{
     vector<Particle> particles;
     int num;
     
+    
+    ofxProcTree * tree;
+    ofCamera cam;
+    ofLight pointLight;
+    ofLight dirLight;
+    
+    bool drawSkeleton;
+    
 };
 
 

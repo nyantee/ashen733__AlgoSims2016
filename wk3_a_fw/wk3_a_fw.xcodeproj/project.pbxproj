@@ -9,6 +9,134 @@
 		<string>46</string>
 		<key>objects</key>
 		<dict>
+			<key>4550E8F57808595826EDDEE4</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxProcTree.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxProcTree-master/src/ofxProcTree.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>CF8BC54E29190526A96264F4</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>625EA235DC39CA3634FD5E94</string>
+					<string>4550E8F57808595826EDDEE4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>B059C6D089CB64FF8D7AA9F4</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>CF8BC54E29190526A96264F4</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxProcTree-master</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>A811F305E47B4B6C6038FACF</key>
+			<dict>
+				<key>fileRef</key>
+				<string>625EA235DC39CA3634FD5E94</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>625EA235DC39CA3634FD5E94</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxProcTree.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxProcTree-master/src/ofxProcTree.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>EDEE196E0B94C38D1F3A481D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.c.h</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxMeshUtils.h</string>
+				<key>path</key>
+				<string>../../../addons/ofxMeshUtils-master/src/ofxMeshUtils.h</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
+			<key>F7FFF080537F4AFBD3F5AB74</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>9CFAE7F5AF2B46482DE1BF5D</string>
+					<string>EDEE196E0B94C38D1F3A481D</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>src</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>4D24BA8277918890696F2F3A</key>
+			<dict>
+				<key>children</key>
+				<array>
+					<string>F7FFF080537F4AFBD3F5AB74</string>
+				</array>
+				<key>isa</key>
+				<string>PBXGroup</string>
+				<key>name</key>
+				<string>ofxMeshUtils-master</string>
+				<key>sourceTree</key>
+				<string>&lt;group&gt;</string>
+			</dict>
+			<key>431A57805F7B83E0C2779DE7</key>
+			<dict>
+				<key>fileRef</key>
+				<string>9CFAE7F5AF2B46482DE1BF5D</string>
+				<key>isa</key>
+				<string>PBXBuildFile</string>
+			</dict>
+			<key>9CFAE7F5AF2B46482DE1BF5D</key>
+			<dict>
+				<key>explicitFileType</key>
+				<string>sourcecode.cpp.cpp</string>
+				<key>fileEncoding</key>
+				<string>30</string>
+				<key>isa</key>
+				<string>PBXFileReference</string>
+				<key>name</key>
+				<string>ofxMeshUtils.cpp</string>
+				<key>path</key>
+				<string>../../../addons/ofxMeshUtils-master/src/ofxMeshUtils.cpp</string>
+				<key>sourceTree</key>
+				<string>SOURCE_ROOT</string>
+			</dict>
 			<key>DA9A942841C8F82387DB9DB4</key>
 			<dict>
 				<key>explicitFileType</key>
@@ -60,7 +188,10 @@
 			<key>BB4B014C10F69532006C3DED</key>
 			<dict>
 				<key>children</key>
-				<array />
+				<array>
+					<string>4D24BA8277918890696F2F3A</string>
+					<string>B059C6D089CB64FF8D7AA9F4</string>
+				</array>
 				<key>isa</key>
 				<string>PBXGroup</string>
 				<key>name</key>
@@ -214,6 +345,8 @@
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>../../../addons/ofxMeshUtils-master/src</string>
+						<string>../../../addons/ofxProcTree-master/src</string>
 					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
@@ -272,6 +405,8 @@
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>../../../addons/ofxMeshUtils-master/src</string>
+						<string>../../../addons/ofxProcTree-master/src</string>
 					</array>
 					<key>CONFIGURATION_BUILD_DIR</key>
 					<string>$(SRCROOT)/bin/</string>
@@ -329,6 +464,8 @@
 					<string>E4B69E200A3A1BDC003C02F2</string>
 					<string>E4B69E210A3A1BDC003C02F2</string>
 					<string>C756CFF0AFAF90C6637ABDE8</string>
+					<string>431A57805F7B83E0C2779DE7</string>
+					<string>A811F305E47B4B6C6038FACF</string>
 				</array>
 				<key>isa</key>
 				<string>PBXSourcesBuildPhase</string>
@@ -413,6 +550,8 @@
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>../../../addons/ofxMeshUtils-master/src</string>
+						<string>../../../addons/ofxProcTree-master/src</string>
 					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
@@ -461,6 +600,8 @@
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>../../../addons/ofxMeshUtils-master/src</string>
+						<string>../../../addons/ofxProcTree-master/src</string>
 					</array>
 					<key>COMBINE_HIDPI_IMAGES</key>
 					<string>YES</string>
