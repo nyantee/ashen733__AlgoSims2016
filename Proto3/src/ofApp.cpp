@@ -143,8 +143,10 @@ Rings[2].update(-0.05, ofVec3f(800,0,700));
 void ofApp::draw(){
     
   
+    ofColor colorOne(0, 0, 255);
+    ofColor colorTwo(0, 0, 0);
     
-    ofBackground(0);
+    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
     
 
     cam.begin();

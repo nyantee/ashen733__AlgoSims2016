@@ -48,6 +48,8 @@ class ofApp : public ofBaseApp{
     ofParameter<float> height;
     ofParameter<float> color;
     ofParameter<float> scolor;
+     ofParameter<float> backglow;
+    ofParameter<float> backblue;
     
     float _x;
     float _y;

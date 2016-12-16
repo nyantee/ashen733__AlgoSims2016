@@ -9,17 +9,23 @@
 void ofApp::setup(){
     
     
+
+    
+    
     soundPlayer.loadSound("vortex.wav");
     soundPlayer.play();
     
-     ofBackground(0);
     
     
     gui.setup();
     gui.add(step.set("step", 0.0001, 0.0001,0.001));
-     gui.add(height.set("height", 20, 2,30));
+     gui.add(height.set("height", 100, 2,100));
     gui.add(color.set("blue", 255, 0,255));
     gui.add(scolor.set("green", 10, 0,255));
+
+    gui.add(backglow.set("backgreen", 60, 0,255));
+    gui.add(backblue.set("backblue", 80, 0,255));
+
 
     
     
@@ -119,7 +125,10 @@ circles[i].update((Onoise+=step), ofPoint(_x, _y));
 void ofApp::draw(){
     
   
-   
+    ofColor colorOne(0, backglow, backblue);
+    ofColor colorTwo(0, 0, 0);
+    
+    ofBackgroundGradient(colorOne, colorTwo, OF_GRADIENT_CIRCULAR);
     
     
 
